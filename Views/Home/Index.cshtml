@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Hello from Index view</h1>
+    </div>
+    <div>
+        @DateTime.Now;
+    </div>
+    <div>
+        @(5-3)
+    </div>
+    <div>
+        @{ 
+            var a = 1;
+            var b = 2;
+            var c = a + b;
+            var currentTime = DateTime.Now;
+            var tomorrowTime = DateTime.Now.AddDays(1);
+            var colorsList = new List<string>() { "Red", "Green", "Blue", "Yellow" };
+         }
+     
+    </div>
+    <div>
+        <lable>@c</lable><br />
+        <lable>Current Time-@currentTime</lable><br />
+        <lable>Tomorrow Time-@tomorrowTime</lable><br />
+        <label>@colorsList.FirstOrDefault()</label>
+    </div>
+</body>
+</html>
